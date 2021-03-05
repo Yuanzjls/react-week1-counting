@@ -1,33 +1,41 @@
-import React, { useState} from "react";
+import React, { useState ,useEffect} from "react";
 import Button from "./components/Button";
 import Text from "./components/Text"
 
 
 function App(props) {
-  const [currentNumber, setNumber] = useState(90);
-
+  const [currentNumber, setNumber] = useState(0);
   const plusEnable = currentNumber<props.maxCapacity;
   const minusEnable = currentNumber>0;
+
   function numPlus(){
     if (plusEnable) {
       setNumber(currentNumber+1);
     }
   }
+  
   function numMinus(){
     if (minusEnable) {
       setNumber(currentNumber-1);
     }
   }
+  
+  function resetNumber(){
+    setNumber(0);
+  }
 
+  useEffect(()=>{if (!plusEnable) alert("Max capacity is reached!");}, [plusEnable]);
+  
+  
   return (
 
     
     <div className="count stack-large">
-      <button>Reset</button>
+      <Button btnText="Reset" btnKey="r" btnFunc={resetNumber}/>
       <Text maxCapacity={props.maxCapacity} currentNumber={currentNumber}/>
       <div className="filters btn-group stack-exception">
-        <Button btnText="+" btnFunc={numPlus} btnEnable={plusEnable?false:true}/>
-        <Button btnText="-" btnFunc={numMinus} btnEnable={minusEnable?false:true}/>        
+        <Button classAttr="btn toggle-btn" btnText="+" btnFunc={numPlus} btnEnable={plusEnable?false:true} btnKey="+"/>
+        <Button classAttr="btn toggle-btn" btnText="-" btnFunc={numMinus} btnEnable={minusEnable?false:true} btnKey="-"/>        
       </div>
       
     </div>

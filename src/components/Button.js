@@ -4,7 +4,7 @@ function Button(props){
     
     return (
         <button type="button"
-          className="btn toggle-btn" disabled={props.btnEnable} onClick={props.btnFunc} accessKey={props.btnText}>
+          className={props.classAttr} disabled={props.btnEnable} onClick={props.btnFunc} accessKey={props.btnKey}>
         <span>{props.btnText}</span>
         </button>
     );
