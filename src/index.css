@@ -299,3 +299,6 @@ body {
 button span{
   font-size: 30px;
 }
+button:active{
+  color:transparent;
+}
