@@ -2,9 +2,9 @@ import React, { useState ,useEffect} from "react";
 import Button from "./components/Button";
 import Text from "./components/Text"
 
-
+const initialNumber=0;
 function App(props) {
-  const [currentNumber, setNumber] = useState(0);
+  const [currentNumber, setNumber] = useState(initialNumber);
   const plusEnable = currentNumber<props.maxCapacity;
   const minusEnable = currentNumber>0;
 
@@ -21,7 +21,7 @@ function App(props) {
   }
   
   function resetNumber(){
-    setNumber(0);
+    setNumber(initialNumber);
   }
 
   useEffect(()=>{if (!plusEnable) alert("Max capacity is reached!");}, [plusEnable]);
