@@ -8,16 +8,23 @@ const useStyles = createUseStyles({
     "&:focus":{      
         background:'gray',      
     }
+  },
+  myResetButton:{
+    color:'#4d4d4d;',
+    background:'white',
+    "&:focus":{      
+        background:'gray',      
+    }
   }
 });
 
 function Button(props){
     const classes = useStyles();
-    const className = (props.btnType!="reset")?"btn toggle-btn":"";
+    const classButton = (props.btnType!=="reset")?classes.myButton:classes.myResetButton;
 
     return (
         <button type="button"
-          className={classes.myButton} disabled={props.btnEnable} onClick={props.btnFunc} accessKey={props.btnKey}>
+          className={classButton} disabled={props.btnEnable} onClick={props.btnFunc} accessKey={props.btnKey}>
         <span>{props.btnText}</span>
         </button>
     );
