@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b129a8b63763d7998e7ed49008b9ad84",
+    "revision": "a82ae854e0e7f8a0b446dbd89057577d",
     "url": "/react-week1-counting/index.html"
   },
   {
-    "revision": "34ac083fff77ee0c6f60",
+    "revision": "ef250c55b3feee2bafbf",
     "url": "/react-week1-counting/static/css/main.c50eceb5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-week1-counting/static/js/2.c55410d0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "34ac083fff77ee0c6f60",
-    "url": "/react-week1-counting/static/js/main.4efe1055.chunk.js"
+    "revision": "ef250c55b3feee2bafbf",
+    "url": "/react-week1-counting/static/js/main.0f5091e8.chunk.js"
   },
   {
     "revision": "ff0f9654007d8d6a6f94",
