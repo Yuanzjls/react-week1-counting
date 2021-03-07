@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
-function Text(props){
-
-    
+function Text(props){    
     const displayWarning=props.currentNumber>=props.maxCapacity? "Max capacity is reached!":"Welcome"; // display message depends on wether reaches capacity or not.
 
     return (

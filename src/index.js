@@ -7,7 +7,7 @@ import App from './App';
 // Set max capacity as 100
 ReactDOM.render(
   <React.StrictMode>
-    <App maxCapacity={100} />  
+    <App />  
   </React.StrictMode>,
   document.getElementById('root')
 );
